@@ -1,0 +1,16 @@
+{
+  "name": "my-module-federation",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "host",
+    "remote_comp"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach --parallel run build",
+    "serve": "yarn workspaces foreach --parallel run serve",
+    "start": "yarn workspaces foreach --parallel --interlaced run start"
+  }
+}
